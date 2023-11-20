@@ -3,6 +3,7 @@ package com.github.relativobr.supreme.machine;
 import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getNewIdSupremeLegacy;
 import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getOldIdSupremeLegacy;
 
+import com.github.relativobr.supreme.Supreme;
 import com.github.relativobr.supreme.generic.machine.SimpleItemContainerMachine;
 import com.github.relativobr.supreme.util.SupremeItemStack;
 import com.github.relativobr.supreme.util.UtilEnergy;
@@ -14,6 +15,7 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import java.util.ArrayList;
@@ -64,6 +66,13 @@ public class ItemConverter extends SimpleItemContainerMachine {
           final ItemMeta inputItemMeta = inputStack.getItemMeta();
           Optional<String> id = Slimefun.getItemDataService().getItemData(inputItemMeta);
           if (id.isPresent()) {
+            if (Supreme.getSupremeOptions().getItemConverterBlacklist().contains(id.get())) {
+              inv.replaceExistingItem(getStatusSlot(), new CustomItemStack(
+                  Material.RED_STAINED_GLASS_PANE, "&cCannot convert this item!"
+              ));
+              break;
+            }
+
             if (checkSlimefunConverter(inv, outputSlots, inputSlot, inputStack, inputItemMeta, id.get())) {
               break;
             }
@@ -101,6 +110,9 @@ public class ItemConverter extends SimpleItemContainerMachine {
       ItemStack item = slimefunItem.getItem().clone();
       processOutputItem(inv, outputSlots, inputSlot, new SlimefunItemStack(itemId, item), inputStack.getAmount(),
           inputItemMeta);
+      inv.replaceExistingItem(getStatusSlot(), new CustomItemStack(
+          Material.BLACK_STAINED_GLASS_PANE, "&8 "
+      ));
       return true;
     }
     return false;

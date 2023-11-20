@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Setter
 @Getter
 @Builder
@@ -33,6 +36,7 @@ public class SupremeOptions {
     boolean enableArmor;
     boolean enableTech;
     boolean enableItemConverter;
+    List<String> itemConverterBlacklist;
     boolean customBc;
 
     public static SupremeOptions defaultValue() {
@@ -59,6 +63,7 @@ public class SupremeOptions {
                 .enableArmor(true)
                 .enableTech(true)
                 .enableItemConverter(true)
+                .itemConverterBlacklist(Arrays.asList("SUPREME_ITEM_CONVERTER_MACHINE"))
                 .customBc(false)
                 .build();
     }

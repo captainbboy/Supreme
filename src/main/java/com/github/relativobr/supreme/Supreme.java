@@ -61,6 +61,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
                 .enableArmor(typeSection.getBoolean("enable-armor", true))
                 .enableTech(typeSection.getBoolean("enable-tech", true))
                 .enableItemConverter(typeSection.getBoolean("enable-item-converter-machine", true))
+                .itemConverterBlacklist(typeSection.getStringList("item-converter-blacklist"))
                 .customBc(typeSection.getBoolean("custom-bc", false))
                 .build();
       }
@@ -149,8 +150,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     }
 
     if (getSupremeOptions().isAutoUpdate() && cfg.getBoolean("options.auto-update")
-        && getDescription().getVersion()
-        .startsWith("DEV - ")) {
+        && getDescription().getVersion().startsWith("DEV - ")) {
       Supreme.inst().log(Level.INFO, "Auto Update: enable");
       new GitHubBuildsUpdater(this, getFile(), "RelativoBR/Supreme/main").start();
     } else {
@@ -189,7 +189,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
   }
 
   public final void log(Level level, String messages) {
-    this.getLogger().log(level, messages);
+    getLogger().log(level, messages);
   }
 
 }
