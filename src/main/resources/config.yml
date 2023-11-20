@@ -1,6 +1,9 @@
 options:
   auto-update: true
   use-legacy-supremeexpansion-item-id: false
+  enable-item-converter-machine: true
+  item-converter-blacklist:
+    - SUPREME_ITEM_CONVERTER_MACHINE
   lang: en-US
   custom-ticker-delay: 2
   enable-generators: true
@@ -21,7 +24,6 @@ options:
   enable-armor: true
   enable-tech: true
   custom-bc: false
-  machine-max-attempt-consumed: 30
 # -------------------------------
 # quarry-custom-output
 # -------------------------------

@@ -60,6 +60,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
                 .enableTools(typeSection.getBoolean("enable-tools", true))
                 .enableArmor(typeSection.getBoolean("enable-armor", true))
                 .enableTech(typeSection.getBoolean("enable-tech", true))
+                .enableItemConverter(typeSection.getBoolean("enable-item-converter-machine", true))
                 .customBc(typeSection.getBoolean("custom-bc", false))
                 .machineMaxAttemptConsumed(typeSection.getInt("machine-max-attempt-consumed", 30))
                 .build();
@@ -148,11 +149,11 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
       return;
     }
 
-		var autoUpdate = getSupremeOptions().isAutoUpdate() && getDescription().getVersion().startsWith("Dev");
-		Supreme.inst().log(Level.INFO, "auto-update: " + autoUpdate);
-    if (autoUpdate) {
-      new BlobBuildUpdater(this, getFile(), "Supreme", "Dev").start();
-    }
+      var autoUpdate = getSupremeOptions().isAutoUpdate() && getDescription().getVersion().startsWith("Dev");
+      Supreme.inst().log(Level.INFO, "auto-update: " + autoUpdate);
+      if (autoUpdate) {
+          new BlobBuildUpdater(this, getFile(), "Supreme", "Dev").start();
+      }
 
     // localization
     Supreme.inst().log(Level.INFO, "Loaded language Supreme: " + getSupremeOptions().getLang());
@@ -186,7 +187,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
   }
 
   public final void log(Level level, String messages) {
-    this.getLogger().log(level, messages);
+    getLogger().log(level, messages);
   }
 
 }
