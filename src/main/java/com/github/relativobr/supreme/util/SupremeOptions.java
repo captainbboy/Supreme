@@ -36,6 +36,7 @@ public class SupremeOptions {
     boolean enableArmor;
     boolean enableTech;
     boolean enableItemConverter;
+    List<String> itemConverterBlacklist;
     boolean customBc;
     List<String> itemConverterBlacklist;
     int machineMaxAttemptConsumed;
@@ -64,6 +65,7 @@ public class SupremeOptions {
                 .enableArmor(true)
                 .enableTech(true)
                 .enableItemConverter(true)
+                .itemConverterBlacklist(Arrays.asList("SUPREME_ITEM_CONVERTER_MACHINE"))
                 .customBc(false)
                 .machineMaxAttemptConsumed(30)
                 .itemConverterBlacklist(List.of("SUPREME_ITEM_CONVERTER_MACHINE"))
