@@ -62,12 +62,12 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       UtilEnergy.energyPowerPerTick(2000), "", "&3Supreme Machine");
 
-  public static final ItemStack[] RECIPE_TECH_GENERATOR = {SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
-      SlimefunItems.REINFORCED_ALLOY_INGOT,
-      new ItemStack(Material.LOOM), SlimefunItems.REINFORCED_ALLOY_INGOT,
-      SupremeComponents.CARRIAGE_MACHINE,
-      SlimefunItems.HEATING_COIL, SupremeComponents.CARRIAGE_MACHINE};
+  public static final ItemStack[] RECIPE_TECH_GENERATOR = {SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SupremeComponents.SYNTHETIC_RUBY.item(), SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SlimefunItems.REINFORCED_ALLOY_INGOT.item(),
+      new ItemStack(Material.LOOM), SlimefunItems.REINFORCED_ALLOY_INGOT.item(),
+      SupremeComponents.CARRIAGE_MACHINE.item(),
+      SlimefunItems.HEATING_COIL.item(), SupremeComponents.CARRIAGE_MACHINE.item()};
 
   public static final List<AbstractItemRecipe> receitasParaProduzir = new ArrayList<>();
   private Map<Block, ItemStack> processing = new HashMap<>();
@@ -106,29 +106,29 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
             getCardTier(tierCard), new ItemStack(input2), new ItemStack(input1),
             new ItemStack(input2),
             new ItemStack(input1)}).register(plugin);
-    TechGenerator.addRecipesToProcess(item, output);
+    TechGenerator.addRecipesToProcess(item.item(), output);
   }
 
   @Nonnull
   private static ItemStack getCardTier(int tierCard) {
     if (tierCard >= 3) {
-      return SupremeComponents.CENTER_CARD_ULTIMATE;
+      return SupremeComponents.CENTER_CARD_ULTIMATE.item();
     } else if (tierCard == 2) {
-      return SupremeComponents.CENTER_CARD_ADVANCED;
+      return SupremeComponents.CENTER_CARD_ADVANCED.item();
     } else {
-      return SupremeComponents.CENTER_CARD_SIMPLE;
+      return SupremeComponents.CENTER_CARD_SIMPLE.item();
     }
   }
 
   private static void invalidStatus(BlockMenu menu, String txt) {
     for (int i : InventoryRecipe.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
-      menu.replaceExistingItem(i, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, txt));
+      menu.replaceExistingItem(i, CustomItemStack.create(Material.RED_STAINED_GLASS_PANE, txt));
     }
   }
 
   private static void invalidStatus(BlockMenu menu, Material material, String txt) {
     for (int i : InventoryRecipe.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
-      menu.replaceExistingItem(i, new CustomItemStack(material, txt));
+      menu.replaceExistingItem(i, CustomItemStack.create(material, txt));
     }
   }
 
@@ -160,22 +160,22 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
   protected void constructMenu(BlockMenuPreset preset) {
 
     for (int i : InventoryRecipe.TECH_GENERATOR_BORDER) {
-      preset.addItem(i, new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " ", new String[0]),
+      preset.addItem(i, CustomItemStack.create(Material.GRAY_STAINED_GLASS_PANE, " ", new String[0]),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     for (int i : InventoryRecipe.TECH_GENERATOR_BORDER_IN) {
-      preset.addItem(i, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, " ", new String[0]),
+      preset.addItem(i, CustomItemStack.create(Material.BLUE_STAINED_GLASS_PANE, " ", new String[0]),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     for (int i : InventoryRecipe.TECH_GENERATOR_BORDER_OUT) {
-      preset.addItem(i, new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, " ", new String[0]),
+      preset.addItem(i, CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE, " ", new String[0]),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     for (int i : InventoryRecipe.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
-      preset.addItem(i, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ", new String[0]),
+      preset.addItem(i, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ", new String[0]),
           ChestMenuUtils.getEmptyClickHandler());
     }
 

@@ -54,9 +54,9 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_I = new ItemStack[]{
-      SupremeComponents.RUSTLESS_MACHINE, MobCollectorTools.MOB_COLLECTOR_I, SupremeComponents.RUSTLESS_MACHINE,
-      SupremeComponents.INDUCTIVE_MACHINE, MobCollectorTools.MOB_COLLECTOR_I, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.AURUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER, SupremeComponents.AURUM_PLATE};
+      SupremeComponents.RUSTLESS_MACHINE.item(), MobCollectorTools.MOB_COLLECTOR_I.item(), SupremeComponents.RUSTLESS_MACHINE.item(),
+      SupremeComponents.INDUCTIVE_MACHINE.item(), MobCollectorTools.MOB_COLLECTOR_I.item(), SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SupremeComponents.AURUM_PLATE.item(), SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER.item(), SupremeComponents.AURUM_PLATE.item()};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_II = new SupremeItemStack(
       "SUPREME_MOB_TECH_COLLECTOR_MACHINE_II", Material.NETHER_GOLD_ORE, "&bMobTech Collector II", "",
@@ -64,20 +64,20 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_I,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.THORNERITE, SupremeCetrus.CETRUS_IGNIS,
-      SupremeComponents.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE.item(), SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CONVEYANCE_MACHINE.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_I.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), SupremeComponents.THORNERITE.item(), SupremeCetrus.CETRUS_IGNIS.item(),
+      SupremeComponents.THORNERITE.item()};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_III = new SupremeItemStack(
       "SUPREME_MOB_TECH_COLLECTOR_MACHINE_III", Material.NETHER_GOLD_ORE, "&bMobTech Collector III", "",
       "&fThis machine allows you to collect ", "&fMobTech head nearby mobs. (9 block)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeCetrus.CETRUS_LUX, SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.item(),
+      SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.THORNERITE.item(), SupremeComponents.SUPREME.item(),
+      MobTechCollector.MOB_TECH_COLLECTOR_MACHINE_II.item(), SupremeComponents.SUPREME.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item(),
+      SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item()};
 
 
   private final Set<MobTechCollectorMachineRecipe> MobTechCollectorMachineRecipes = new HashSet();
@@ -152,7 +152,7 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
         ItemStack itemInSlot = inv.getItemInSlot(slot);
         final ItemStack itemInInput = produce.getInput()[0];
         if (itemInSlot != null && itemInInput != null && SlimefunUtils.isItemSimilar(itemInSlot,
-            SupremeComponents.EMPTY_MOBTECH, false, false) && InvUtils.fits(inv.toInventory(), produce.getOutput()[0],
+            SupremeComponents.EMPTY_MOBTECH.item(), false, false) && InvUtils.fits(inv.toInventory(), produce.getOutput()[0],
             this.getOutputSlots())) {
           Block invBlock = inv.getBlock();
           produce.getClass();

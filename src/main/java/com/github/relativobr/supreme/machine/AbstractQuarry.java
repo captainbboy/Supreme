@@ -111,7 +111,7 @@ public class AbstractQuarry extends SlimefunItem implements EnergyNetComponent {
           inv.addItem(itemStack);
           if (effect) {
             Location loc = b.getLocation().add(0.5, 0.8, 0.5);
-            b.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, loc, 6);
+            b.getWorld().spawnParticle(Particle.HAPPY_VILLAGER, loc, 6);
           }
           removeCharge(b.getLocation(), getEnergyConsumption());
           energyCharge = getCharge(b.getLocation());
@@ -172,16 +172,16 @@ public class AbstractQuarry extends SlimefunItem implements EnergyNetComponent {
     final String infoSpeed = UtilEnergy.timePerItem((getSupremeOptions().getCustomTickerDelay() * delaySpeed) / 2);
     if (energyCharge < getEnergyConsumption() || !this.enabled) {
       menu.addItem(InventoryRecipe.QUARRY_STATUS,
-          new CustomItemStack(Material.OBSIDIAN, ChatColor.RED + "NOT-ACTIVE", powerPerSecond, powerCharged,
+          CustomItemStack.create(Material.OBSIDIAN, ChatColor.RED + "NOT-ACTIVE", powerPerSecond, powerCharged,
               infoSpeed));
       menu.addMenuClickHandler(InventoryRecipe.QUARRY_STATUS, ChestMenuUtils.getEmptyClickHandler());
     } else {
       menu.addItem(InventoryRecipe.QUARRY_STATUS,
-          new CustomItemStack(Material.GLOWSTONE, ChatColor.GREEN + "ACTIVE", powerPerSecond, powerCharged, infoSpeed));
+          CustomItemStack.create(Material.GLOWSTONE, ChatColor.GREEN + "ACTIVE", powerPerSecond, powerCharged, infoSpeed));
       menu.addMenuClickHandler(InventoryRecipe.QUARRY_STATUS, ChestMenuUtils.getEmptyClickHandler());
     }
     if (enabled) {
-      menu.addItem(InventoryRecipe.QUARRY_BUTTON, new CustomItemStack(Material.EMERALD_BLOCK,
+      menu.addItem(InventoryRecipe.QUARRY_BUTTON, CustomItemStack.create(Material.EMERALD_BLOCK,
           Slimefun.getLocalization().getMessages(p, "messages.auto-crafting.tooltips.enabled")));
       menu.addMenuClickHandler(InventoryRecipe.QUARRY_BUTTON, (pl, item, slot, action) -> {
         enabled = false;
@@ -189,7 +189,7 @@ public class AbstractQuarry extends SlimefunItem implements EnergyNetComponent {
         return false;
       });
     } else {
-      menu.addItem(InventoryRecipe.QUARRY_BUTTON, new CustomItemStack(Material.REDSTONE_BLOCK,
+      menu.addItem(InventoryRecipe.QUARRY_BUTTON, CustomItemStack.create(Material.REDSTONE_BLOCK,
           Slimefun.getLocalization().getMessages(p, "messages.auto-crafting.tooltips.disabled")));
       menu.addMenuClickHandler(InventoryRecipe.QUARRY_BUTTON, (pl, item, slot, action) -> {
         enabled = true;

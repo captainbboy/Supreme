@@ -13,8 +13,8 @@ public class ArmorThornium {
 
   public static final SlimefunItemStack THORNIUM_BOOTS = new SupremeItemStack("SUPREME_BOOTS_THORNIUM",
       Material.NETHERITE_BOOTS);
-  public static final ItemStack[] RECIPE_THORNIUM_BOOTS = {null, null, null, SupremeCetrus.CETRUS_IGNIS, null,
-      SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNIUM_INGOT, null, SupremeComponents.THORNIUM_INGOT};
+  public static final ItemStack[] RECIPE_THORNIUM_BOOTS = {null, null, null, SupremeCetrus.CETRUS_IGNIS.item(), null,
+      SupremeCetrus.CETRUS_IGNIS.item(), SupremeComponents.THORNIUM_INGOT.item(), null, SupremeComponents.THORNIUM_INGOT.item()};
 
   public static final SlimefunItemStack THORNIUM_BOOTS_MAGIC = new SupremeItemStack("SUPREME_BOOTS_MAGIC",
       Material.NETHERITE_BOOTS);
@@ -33,10 +33,10 @@ public class ArmorThornium {
 
   public static final SlimefunItemStack THORNIUM_CHESTPLATE = new SupremeItemStack("SUPREME_CHESTPLATE_THORNIUM",
       Material.NETHERITE_CHESTPLATE);
-  public static final ItemStack[] RECIPE_THORNIUM_CHESTPLATE = {SupremeComponents.THORNIUM_INGOT, null,
-      SupremeComponents.THORNIUM_INGOT, SupremeComponents.THORNIUM_INGOT, SupremeCetrus.CETRUS_LUMIUM,
-      SupremeComponents.THORNIUM_INGOT, SupremeComponents.THORNIUM_INGOT, SupremeComponents.THORNIUM_INGOT,
-      SupremeComponents.THORNIUM_INGOT};
+  public static final ItemStack[] RECIPE_THORNIUM_CHESTPLATE = {SupremeComponents.THORNIUM_INGOT.item(), null,
+      SupremeComponents.THORNIUM_INGOT.item(), SupremeComponents.THORNIUM_INGOT.item(), SupremeCetrus.CETRUS_LUMIUM.item(),
+      SupremeComponents.THORNIUM_INGOT.item(), SupremeComponents.THORNIUM_INGOT.item(), SupremeComponents.THORNIUM_INGOT.item(),
+      SupremeComponents.THORNIUM_INGOT.item()};
 
   public static final SlimefunItemStack THORNIUM_CHESTPLATE_MAGIC = new SupremeItemStack("SUPREME_CHESTPLATE_MAGIC",
       Material.NETHERITE_CHESTPLATE);
@@ -55,8 +55,8 @@ public class ArmorThornium {
 
   public static final SlimefunItemStack THORNIUM_HELMET = new SupremeItemStack("SUPREME_HELMET_THORNIUM",
       Material.NETHERITE_HELMET);
-  public static final ItemStack[] RECIPE_THORNIUM_HELMET = {SupremeComponents.THORNIUM_INGOT, SupremeCetrus.CETRUS_AQUA,
-      SupremeComponents.THORNIUM_INGOT, SupremeComponents.THORNIUM_INGOT, null, SupremeComponents.THORNIUM_INGOT, null,
+  public static final ItemStack[] RECIPE_THORNIUM_HELMET = {SupremeComponents.THORNIUM_INGOT.item(), SupremeCetrus.CETRUS_AQUA.item(),
+      SupremeComponents.THORNIUM_INGOT.item(), SupremeComponents.THORNIUM_INGOT.item(), null, SupremeComponents.THORNIUM_INGOT.item(), null,
       null, null};
 
   public static final SlimefunItemStack THORNIUM_HELMET_MAGIC = new SupremeItemStack("SUPREME_HELMET_MAGIC",
@@ -76,9 +76,9 @@ public class ArmorThornium {
 
   public static final SlimefunItemStack THORNIUM_LEGGINGS = new SupremeItemStack("SUPREME_LEGGINGS_THORNIUM",
       Material.NETHERITE_LEGGINGS);
-  public static final ItemStack[] RECIPE_THORNIUM_LEGGINGS = {SupremeCetrus.CETRUS_VENTUS,
-      SupremeComponents.THORNIUM_INGOT, SupremeCetrus.CETRUS_VENTUS, SupremeComponents.THORNIUM_INGOT, null,
-      SupremeComponents.THORNIUM_INGOT, SupremeComponents.THORNIUM_INGOT, null, SupremeComponents.THORNIUM_INGOT};
+  public static final ItemStack[] RECIPE_THORNIUM_LEGGINGS = {SupremeCetrus.CETRUS_VENTUS.item(),
+      SupremeComponents.THORNIUM_INGOT.item(), SupremeCetrus.CETRUS_VENTUS.item(), SupremeComponents.THORNIUM_INGOT.item(), null,
+      SupremeComponents.THORNIUM_INGOT.item(), SupremeComponents.THORNIUM_INGOT.item(), null, SupremeComponents.THORNIUM_INGOT.item()};
 
   public static final SlimefunItemStack THORNIUM_LEGGINGS_MAGIC = new SupremeItemStack("SUPREME_LEGGINGS_MAGIC",
       Material.NETHERITE_LEGGINGS);

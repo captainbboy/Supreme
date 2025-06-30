@@ -67,7 +67,7 @@ public class ItemConverter extends SimpleItemContainerMachine {
           Optional<String> id = Slimefun.getItemDataService().getItemData(inputItemMeta);
           if (id.isPresent()) {
             if (Supreme.getSupremeOptions().getItemConverterBlacklist().contains(id.get())) {
-              inv.replaceExistingItem(getStatusSlot(), new CustomItemStack(
+              inv.replaceExistingItem(getStatusSlot(), CustomItemStack.create(
                   Material.RED_STAINED_GLASS_PANE, "&cCannot convert this item!"
               ));
               break;
@@ -92,7 +92,7 @@ public class ItemConverter extends SimpleItemContainerMachine {
         ItemStack item;
         if (slimefunItem != null) {
           item = slimefunItem.getItem().clone();
-          processOutputItem(inv, outputSlots, inputSlot, new SlimefunItemStack(slimefunItem.getId(), item),
+          processOutputItem(inv, outputSlots, inputSlot, new SlimefunItemStack(slimefunItem.getId(), item).item(),
               inputStack.getAmount(), inputStack.getItemMeta());
         } else {
           item = inputStack.clone();
@@ -108,9 +108,9 @@ public class ItemConverter extends SimpleItemContainerMachine {
     SlimefunItem slimefunItem = SlimefunItem.getById(itemId);
     if (slimefunItem != null) {
       ItemStack item = slimefunItem.getItem().clone();
-      processOutputItem(inv, outputSlots, inputSlot, new SlimefunItemStack(itemId, item), inputStack.getAmount(),
+      processOutputItem(inv, outputSlots, inputSlot, new SlimefunItemStack(itemId, item).item(), inputStack.getAmount(),
           inputItemMeta);
-      inv.replaceExistingItem(getStatusSlot(), new CustomItemStack(
+      inv.replaceExistingItem(getStatusSlot(), CustomItemStack.create(
           Material.BLACK_STAINED_GLASS_PANE, "&8 "
       ));
       return true;

@@ -98,7 +98,7 @@ public final class EnergyGenerator extends MenuBlock implements EnergyNetProvide
     BlockMenu inv = BlockStorage.getInventory(l);
     if (inv != null && inv.hasViewer()) {
       if (this.generate == 0) {
-        inv.replaceExistingItem(13, new CustomItemStack(
+        inv.replaceExistingItem(13, CustomItemStack.create(
                 Material.RED_STAINED_GLASS_PANE,
                 "&cNot generating",
                 "&7Type: &6" + this.type,
@@ -106,7 +106,7 @@ public final class EnergyGenerator extends MenuBlock implements EnergyNetProvide
                 "&7Capacity: &6" + UtilEnergy.format(this.buffer) + " J"
         ));
       } else {
-        inv.replaceExistingItem(13, new CustomItemStack(
+        inv.replaceExistingItem(13, CustomItemStack.create(
                 Material.GREEN_STAINED_GLASS_PANE,
                 "&aGeneration",
                 "&7Type: &6" + this.type,

@@ -79,24 +79,24 @@ public class SetupSimpleCard {
 
     TechGenerator.preSetup(plugin, SimpleCard.CARD_AMETHYST, Material.AMETHYST_BLOCK, Material.AMETHYST_SHARD);
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_IRON_DUST, SlimefunItems.IRON_DUST, SlimefunItems.IRON_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_IRON_DUST, SlimefunItems.IRON_DUST.item(), SlimefunItems.IRON_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_LEAD_DUST, SlimefunItems.LEAD_DUST, SlimefunItems.LEAD_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_LEAD_DUST, SlimefunItems.LEAD_DUST.item(), SlimefunItems.LEAD_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_GOLD_DUST, SlimefunItems.GOLD_DUST, SlimefunItems.GOLD_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_GOLD_DUST, SlimefunItems.GOLD_DUST.item(), SlimefunItems.GOLD_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_COPPER_DUST, SlimefunItems.COPPER_DUST, SlimefunItems.COPPER_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_COPPER_DUST, SlimefunItems.COPPER_DUST.item(), SlimefunItems.COPPER_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_MAGNESIUM_DUST, SlimefunItems.MAGNESIUM_DUST,
-        SlimefunItems.MAGNESIUM_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_MAGNESIUM_DUST, SlimefunItems.MAGNESIUM_DUST.item(),
+        SlimefunItems.MAGNESIUM_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_ALUMINUM_DUST, SlimefunItems.ALUMINUM_DUST,
-        SlimefunItems.ALUMINUM_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_ALUMINUM_DUST, SlimefunItems.ALUMINUM_DUST.item(),
+        SlimefunItems.ALUMINUM_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_SILVER_DUST, SlimefunItems.SILVER_DUST, SlimefunItems.SILVER_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_SILVER_DUST, SlimefunItems.SILVER_DUST.item(), SlimefunItems.SILVER_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_TIN_DUST, SlimefunItems.TIN_DUST, SlimefunItems.TIN_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_TIN_DUST, SlimefunItems.TIN_DUST.item(), SlimefunItems.TIN_DUST.item());
 
-    TechGenerator.preSetup(plugin, SimpleCard.CARD_ZINC_DUST, SlimefunItems.ZINC_DUST, SlimefunItems.ZINC_DUST);
+    TechGenerator.preSetup(plugin, SimpleCard.CARD_ZINC_DUST, SlimefunItems.ZINC_DUST.item(), SlimefunItems.ZINC_DUST.item());
   }
 }

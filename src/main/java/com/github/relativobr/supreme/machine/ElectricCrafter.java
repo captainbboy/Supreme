@@ -24,34 +24,34 @@ public class ElectricCrafter extends GenericMachine {
       Material.CRAFTING_TABLE, "&bElectric Crafter", "", "&fCraft Items", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       UtilEnergy.energyPowerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE,
-      SlimefunItems.VANILLA_AUTO_CRAFTER, SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SupremeComponents.ADAMANTIUM_PLATE,
-      SlimefunItems.ENHANCED_AUTO_CRAFTER, SupremeComponents.ADAMANTIUM_PLATE};
+  public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.item(),
+      SlimefunItems.VANILLA_AUTO_CRAFTER.item(), SupremeComponents.RUSTLESS_MACHINE.item(), SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SupremeComponents.SYNTHETIC_RUBY.item(), SupremeComponents.INDUCTIVE_MACHINE.item(), SupremeComponents.ADAMANTIUM_PLATE.item(),
+      SlimefunItems.ENHANCED_AUTO_CRAFTER.item(), SupremeComponents.ADAMANTIUM_PLATE.item()};
 
   public static final SlimefunItemStack ELECTRIC_CRAFTER_MACHINE_II = new SupremeItemStack(
       "SUPREME_ELECTRIC_CRAFTER_II", Material.CRAFTING_TABLE, "&bElectric Crafter II", "", "&fAdvanced Craft Items", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
       UtilEnergy.energyPowerPerSecond(100), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE, SupremeComponents.BLEND_MACHINE, SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, ElectricCrafter.ELECTRIC_CRAFTER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.CRYSTALLIZER_MACHINE, SupremeCetrus.CETRUS_IGNIS, SupremeComponents.CRYSTALLIZER_MACHINE};
+      SupremeComponents.CONVEYANCE_MACHINE.item(), SupremeComponents.BLEND_MACHINE.item(), SupremeComponents.CONVEYANCE_MACHINE.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), ElectricCrafter.ELECTRIC_CRAFTER_MACHINE.item(), SupremeComponents.INDUCTOR_MACHINE.item(),
+      SupremeComponents.CRYSTALLIZER_MACHINE.item(), SupremeCetrus.CETRUS_IGNIS.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item()};
 
   public static final SlimefunItemStack ELECTRIC_CRAFTER_MACHINE_III = new SupremeItemStack(
       "SUPREME_ELECTRIC_CRAFTER_III", Material.CRAFTING_TABLE, "&bElectric Crafter III", "", "&fAdvanced Craft Items",
       "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
       UtilEnergy.energyPowerPerSecond(300), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeCetrus.CETRUS_LUX, SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      ElectricCrafter.ELECTRIC_CRAFTER_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.item(),
+      SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.THORNERITE.item(), SupremeComponents.SUPREME.item(),
+      ElectricCrafter.ELECTRIC_CRAFTER_MACHINE_II.item(), SupremeComponents.SUPREME.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item(),
+      SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item()};
 
   public static final AbstractItemRecipe RECIPE_BATTERY = new AbstractItemRecipe(
-      new ItemStack[]{SlimefunItems.ZINC_INGOT, SlimefunItems.SULFATE,
-          SlimefunItems.COPPER_INGOT, SlimefunItems.ZINC_INGOT,
-          SlimefunItems.SULFATE, SlimefunItems.COPPER_INGOT,
-          new ItemStack(Material.REDSTONE), null, null}, new SlimefunItemStack(SlimefunItems.BATTERY, 1));
+      new ItemStack[]{SlimefunItems.ZINC_INGOT.item(), SlimefunItems.SULFATE.item(),
+          SlimefunItems.COPPER_INGOT.item(), SlimefunItems.ZINC_INGOT.item(),
+          SlimefunItems.SULFATE.item(), SlimefunItems.COPPER_INGOT.item(),
+          new ItemStack(Material.REDSTONE), null, null}, new SlimefunItemStack(SlimefunItems.BATTERY, 1).item());
   public static final AbstractItemRecipe RECIPE_BLAZE_POWDER = new AbstractItemRecipe(
       new ItemStack[]{new ItemStack(Material.BLAZE_ROD), null, null, null, null, null, null, null, null},
       new ItemStack(Material.BLAZE_POWDER, 2));
@@ -80,9 +80,9 @@ public class ElectricCrafter extends GenericMachine {
           new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.OAK_SLAB),
           new ItemStack(Material.OAK_PLANKS)}, new ItemStack(Material.BARREL, 1));
   public static final AbstractItemRecipe RECIPE_SYNTHETIC_AMETHYST = new AbstractItemRecipe(
-      SupremeComponents.RECIPE_SYNTHETIC_AMETHYST, SupremeComponents.SYNTHETIC_AMETHYST);
+      SupremeComponents.RECIPE_SYNTHETIC_AMETHYST, SupremeComponents.SYNTHETIC_AMETHYST.item());
   public static final AbstractItemRecipe RECIPE_SYNTHETIC_RUBY = new AbstractItemRecipe(
-      SupremeComponents.RECIPE_SYNTHETIC_RUBY, SupremeComponents.SYNTHETIC_RUBY);
+      SupremeComponents.RECIPE_SYNTHETIC_RUBY, SupremeComponents.SYNTHETIC_RUBY.item());
 
   public ElectricCrafter(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
     super(category, item, recipeType, recipe);

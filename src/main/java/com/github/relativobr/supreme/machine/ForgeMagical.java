@@ -26,28 +26,28 @@ public class ForgeMagical extends SimpleItemWithLargeContainerMachine {
       Material.ENCHANTING_TABLE, "&bForge Magical", "", "&fThis machine allows you to", "&fforge magical resources.",
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE,
-      new ItemStack(Material.ENCHANTING_TABLE), SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.ELECTRIC_GOLD_PAN_3,
-      SlimefunItems.PROGRAMMABLE_ANDROID_3, SlimefunItems.ELECTRIC_ORE_GRINDER_3};
+  public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.item(),
+      new ItemStack(Material.ENCHANTING_TABLE), SupremeComponents.RUSTLESS_MACHINE.item(), SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SupremeComponents.SYNTHETIC_RUBY.item(), SupremeComponents.INDUCTIVE_MACHINE.item(), SlimefunItems.ELECTRIC_GOLD_PAN_3.item(),
+      SlimefunItems.PROGRAMMABLE_ANDROID_3.item(), SlimefunItems.ELECTRIC_ORE_GRINDER_3.item()};
 
   public static final SlimefunItemStack FORGE_MAGICAL_MACHINE_II = new SupremeItemStack("SUPREME_FORGE_MAGICAL_II",
       Material.ENCHANTING_TABLE, "&bForge Magical II", "", "&fThis machine allows you to", "&fforge magical resources.",
       "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUX, SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, ForgeMagical.FORGE_MAGICAL_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.THORNERITE, SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE.item(), SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.CONVEYANCE_MACHINE.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), ForgeMagical.FORGE_MAGICAL_MACHINE.item(), SupremeComponents.INDUCTOR_MACHINE.item(),
+      SupremeComponents.THORNERITE.item(), SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.THORNERITE.item()};
 
   public static final SlimefunItemStack FORGE_MAGICAL_MACHINE_III = new SupremeItemStack("SUPREME_FORGE_MAGICAL_III",
       Material.ENCHANTING_TABLE, "&bForge Magical III", "", "&fThis machine allows you to",
       "&fforge magical resources.", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       LoreBuilder.speed(15), LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeAttribute.getMagic(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      ForgeMagical.FORGE_MAGICAL_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.item(),
+      SupremeAttribute.getMagic().item(), SupremeComponents.THORNERITE.item(), SupremeComponents.SUPREME.item(),
+      ForgeMagical.FORGE_MAGICAL_MACHINE_II.item(), SupremeComponents.SUPREME.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item(),
+      SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item()};
 
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_GRAVEL = new AbstractItemRecipe(
       new ItemStack(Material.COBBLESTONE, 32), new ItemStack(Material.GRAVEL, 32));
@@ -62,64 +62,64 @@ public class ForgeMagical extends SimpleItemWithLargeContainerMachine {
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_NETHER_WART = new AbstractItemRecipe(
       new ItemStack(Material.WHEAT, 32), new ItemStack(Material.NETHER_WART, 16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_1 = new AbstractItemRecipe(
-      new ItemStack(Material.NETHER_WART, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32));
+      new ItemStack(Material.NETHER_WART, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 8));
+      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32).item(), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_3, 8));
+      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 32).item(), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_3, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDER_EYE = new AbstractItemRecipe(
       new ItemStack(Material.ENDER_PEARL, 16), new ItemStack(Material.ENDER_EYE, 8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_1 = new AbstractItemRecipe(
-      new ItemStack(Material.ENDER_EYE, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32));
+      new ItemStack(Material.ENDER_EYE, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 8));
+      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32).item(), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 8));
+      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 32).item(), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_SAPPHIRE = new AbstractItemRecipe(
-      new ItemStack(Material.LAPIS_LAZULI, 32), new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 8));
+      new ItemStack(Material.LAPIS_LAZULI, 32), new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_EMERALD = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 32),
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_EMERALD, 16));
+      new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 32).item(),
+      new SlimefunItemStack(SlimefunItems.SYNTHETIC_EMERALD, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBON = new AbstractItemRecipe(
-      new ItemStack(Material.COAL, 32), new SlimefunItemStack(SlimefunItems.CARBON, 8));
+      new ItemStack(Material.COAL, 32), new SlimefunItemStack(SlimefunItems.CARBON, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_COMPRESSED_CARBON = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CARBON, 32), new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 8));
+      new SlimefunItemStack(SlimefunItems.CARBON, 32).item(), new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBON_CHUNK = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 32), new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 4));
+      new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 32).item(), new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 4).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_DIAMOND = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 16),
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16));
+      new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 16).item(),
+      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBONADO = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16), new SlimefunItemStack(SlimefunItems.CARBONADO, 8));
+      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16).item(), new SlimefunItemStack(SlimefunItems.CARBONADO, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SOLAR_PANEL = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.FERROSILICON, 32), new SlimefunItemStack(SlimefunItems.SOLAR_PANEL, 16));
+      new SlimefunItemStack(SlimefunItems.FERROSILICON, 32).item(), new SlimefunItemStack(SlimefunItems.SOLAR_PANEL, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGNET = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.COBALT_INGOT, 32), new SlimefunItemStack(SlimefunItems.MAGNET, 16));
+      new SlimefunItemStack(SlimefunItems.COBALT_INGOT, 32).item(), new SlimefunItemStack(SlimefunItems.MAGNET, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ELECTRO_MAGNET = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGNET, 32), new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 16));
+      new SlimefunItemStack(SlimefunItems.MAGNET, 32).item(), new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ELECTRIC_MOTOR = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 32), new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 16));
+      new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 32).item(), new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_HEATING_COIL = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 32), new SlimefunItemStack(SlimefunItems.HEATING_COIL, 16));
+      new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 32).item(), new SlimefunItemStack(SlimefunItems.HEATING_COIL, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_TINY_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CRUSHED_ORE, 32), new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 8));
+      new SlimefunItemStack(SlimefunItems.CRUSHED_ORE, 32).item(), new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SMALL_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 32), new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 8));
+      new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 32).item(), new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 32), new SlimefunItemStack(SlimefunItems.URANIUM, 8));
+      new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 32).item(), new SlimefunItemStack(SlimefunItems.URANIUM, 8).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.URANIUM, 32), new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 16));
+      new SlimefunItemStack(SlimefunItems.URANIUM, 32).item(), new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 32),
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 16));
+      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 32).item(),
+      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 32),
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_3, 16));
+      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 32).item(),
+      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_3, 16).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_STEEL_PLATE = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.STEEL_INGOT, 32), new SlimefunItemStack(SlimefunItems.STEEL_PLATE, 4));
+      new SlimefunItemStack(SlimefunItems.STEEL_INGOT, 32).item(), new SlimefunItemStack(SlimefunItems.STEEL_PLATE, 4).item());
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_REINFORCED_PLATE = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.REINFORCED_ALLOY_INGOT, 32),
-      new SlimefunItemStack(SlimefunItems.REINFORCED_PLATE, 4));
+      new SlimefunItemStack(SlimefunItems.REINFORCED_ALLOY_INGOT, 32).item(),
+      new SlimefunItemStack(SlimefunItems.REINFORCED_PLATE, 4).item());
 
   public ForgeMagical(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
     super(category, item, recipeType, recipe);

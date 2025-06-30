@@ -43,7 +43,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
       MobTech mobTech = new MobTech(ItemGroups.COMPONENTS_CATEGORY,
           ItemUtil.buildItemFromMobTechDTO(item, 0),
           RecipeType.NULL,
-          new ItemStack[]{MobCollectorTools.MOB_COLLECTOR_I});
+          new ItemStack[]{MobCollectorTools.MOB_COLLECTOR_I.item()});
       mobTech.setMobTechType(item.getMobTechType());
       mobTech.setMobTechTier(0);
       mobTech.register(plugin);
@@ -75,12 +75,12 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
     // upgrade tier
     for (int i = 2; i <= 9; i++) {
-      TechRobotic.addRecipe(ItemUtil.buildItemFromMobTechDTO(item, (i - 1)),
-          ItemUtil.buildItemFromMobTechDTO(item, i));
+      TechRobotic.addRecipe(ItemUtil.buildItemFromMobTechDTO(item, (i - 1)).item(),
+          ItemUtil.buildItemFromMobTechDTO(item, i).item());
       mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY,
           ItemUtil.buildItemFromMobTechDTO(item, i),
           RecipeType.NULL,
-          new ItemStack[]{TechRobotic.TECH_ROBOTIC});
+          new ItemStack[]{TechRobotic.TECH_ROBOTIC.item()});
       mobTech.setMobTechType(item.getMobTechType());
       mobTech.setMobTechTier(i);
       mobTech.register(plugin);
@@ -95,25 +95,26 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     }
 
     if (MobTechType.ROBOTIC_ACCELERATION == mobTechType) {
-      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET, SlimefunItems.FIRE_RUNE,
-          SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.PLASTIC_SHEET, SlimefunItems.ANDROID_MEMORY_CORE,
-          SlimefunItems.PLASTIC_SHEET,
-          SupremeComponents.SYNTHETIC_RUBY, itemStack, SupremeComponents.SYNTHETIC_RUBY};
+      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.FIRE_RUNE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.ANDROID_MEMORY_CORE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SupremeComponents.SYNTHETIC_RUBY.item(), itemStack, SupremeComponents.SYNTHETIC_RUBY.item()
+      };
     }
     if (MobTechType.ROBOTIC_CLONING == mobTechType) {
-      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET, SlimefunItems.RAINBOW_RUNE,
-          SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.PLASTIC_SHEET, SlimefunItems.ANDROID_MEMORY_CORE,
-          SlimefunItems.PLASTIC_SHEET,
-          SupremeComponents.SYNTHETIC_RUBY, itemStack, SupremeComponents.SYNTHETIC_RUBY};
+      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.RAINBOW_RUNE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.ANDROID_MEMORY_CORE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SupremeComponents.SYNTHETIC_RUBY.item(), itemStack, SupremeComponents.SYNTHETIC_RUBY.item()};
     }
     if (MobTechType.ROBOTIC_EFFICIENCY == mobTechType) {
-      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET, SlimefunItems.LIGHTNING_RUNE,
-          SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.PLASTIC_SHEET, SlimefunItems.ANDROID_MEMORY_CORE,
-          SlimefunItems.PLASTIC_SHEET,
-          SupremeComponents.SYNTHETIC_RUBY, itemStack, SupremeComponents.SYNTHETIC_RUBY};
+      return new ItemStack[]{SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.LIGHTNING_RUNE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SlimefunItems.PLASTIC_SHEET.item(), SlimefunItems.ANDROID_MEMORY_CORE.item(),
+          SlimefunItems.PLASTIC_SHEET.item(),
+          SupremeComponents.SYNTHETIC_RUBY.item(), itemStack, SupremeComponents.SYNTHETIC_RUBY.item()};
     }
     return null;
   }
@@ -147,7 +148,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     MobTech mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY,
         ItemUtil.buildItemFromMobTechDTO(item, 1),
         RecipeType.NULL,
-        new ItemStack[]{TechMutation.TECH_MUTATION_I});
+        new ItemStack[]{TechMutation.TECH_MUTATION_I.item()});
     mobTech.setMobTechType(item.getMobTechType());
     mobTech.setMobTechTier(1);
     mobTech.register(plugin);
@@ -170,7 +171,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
       TechMutation.addRecipeTechMutation(inputTier, inputTier,
           (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 25 : 20, itemStack);
       mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY, itemStack, RecipeType.NULL,
-          new ItemStack[]{TechMutation.TECH_MUTATION_I});
+          new ItemStack[]{TechMutation.TECH_MUTATION_I.item()});
       mobTech.setMobTechType(item.getMobTechType());
       mobTech.setMobTechTier(i);
       mobTech.register(plugin);
