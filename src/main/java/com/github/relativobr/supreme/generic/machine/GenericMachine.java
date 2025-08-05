@@ -403,15 +403,23 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
         updateStatusInvalidInput(inv);
       } else {
         attemptCount.put(b, attempts);
-        var progressCount = getConsumedItems(b).values().stream().mapToInt(Integer::intValue).sum();
-        var totalProgress = Arrays.stream(getProcessing(b).getInput()).mapToInt(ItemStack::getAmount).sum();
-        updateStatusLoadMaterial(inv, getProcessing(b).getOutput()[0], attempts, progressCount, totalProgress);
+        if (getConsumedItems(b) != null) {
+          var progressCount = getConsumedItems(b).values().stream().mapToInt(Integer::intValue).sum();
+          var totalProgress = Arrays.stream(getProcessing(b).getInput()).mapToInt(ItemStack::getAmount).sum();
+          updateStatusLoadMaterial(inv, getProcessing(b).getOutput()[0], attempts, progressCount, totalProgress);
+        }
       }
     }
   }
 
   private void revertConsumedItem(Block b, BlockMenu inv) {
-    for (Map.Entry<ItemStack, Integer> consumedEntry : getConsumedItems(b).entrySet()) {
+    Map<ItemStack, Integer> consumedItems = getConsumedItems(b);
+    if (consumedItems == null || consumedItems.isEmpty()) {
+      return;
+    }
+
+    // else consumedItems is not null or empty, so we can proceed to revert them
+    for (Map.Entry<ItemStack, Integer> consumedEntry : consumedItems.entrySet()) {
       ItemStack consumedItem = consumedEntry.getKey();
       int amount = consumedEntry.getValue();
       if (consumedItem != null && consumedItem.getType() != Material.AIR) {
@@ -457,7 +465,12 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
       int requiredAmount = entry.getValue();
       int foundAmount = 0;
 
-      for (Map.Entry<ItemStack, Integer> consumedEntry : getConsumedItems(b).entrySet()) {
+      Map<ItemStack, Integer> consumedItems = getConsumedItems(b);
+      if (consumedItems == null) {
+        continue;
+      }
+
+      for (Map.Entry<ItemStack, Integer> consumedEntry : consumedItems.entrySet()) {
         if (SlimefunUtils.isItemSimilar(consumedEntry.getKey(), requiredItem, false, false)) {
           foundAmount += consumedEntry.getValue();
         }

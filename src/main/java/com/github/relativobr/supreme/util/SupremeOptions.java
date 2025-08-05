@@ -38,7 +38,6 @@ public class SupremeOptions {
     boolean enableItemConverter;
     List<String> itemConverterBlacklist;
     boolean customBc;
-    List<String> itemConverterBlacklist;
     int machineMaxAttemptConsumed;
 
     public static SupremeOptions defaultValue() {
