@@ -150,7 +150,7 @@ public class SimpleCard {
 
 
   public static final SlimefunItemStack CARD_AMETHYST = new SupremeItemStack("SUPREME_CARD_AMETHYST",
-      Material.MUSIC_DISC_FAR, "&bCard Machine Ametista", "", "&fChange to Production Ametista", "",
+      Material.MUSIC_DISC_FAR, "&bCard Machine Amethyst", "", "&fChange to Production Amethyst", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
 
 
